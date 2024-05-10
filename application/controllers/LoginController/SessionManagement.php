@@ -38,6 +38,11 @@ class SessionManagement extends CI_Controller
         $userLoginInfo = $this->_loginData->GetData($this);
         $email = $userLoginInfo['email'];
         $password = $userLoginInfo['password'];
+
+        // $email = $this->input->POST('email');
+        // $password = $this->input->POST('password');
+
+        // $this->form_validation->set_rules($email,'Email','required');
         
         $authResult = $this->_userModel->authenticate($email,$password);
         $result = $this->_loginHelper->getResult($authResult); 

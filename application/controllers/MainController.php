@@ -30,6 +30,11 @@ class MainController extends CI_Controller
         $this->load->model('DataManagementModel');
     }
 
+    public function index()
+    {
+        $this->homePage();
+    }
+
     public function homePage()
     {
         if($this->_activeUser == ""){

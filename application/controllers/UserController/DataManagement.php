@@ -193,42 +193,81 @@ class DataManagement extends CI_Controller
             echo "Deleting employee failed";
         };
     }
+
+    private function sortByPattern($a,$b,$pattern)
+    {
+        return strcmp($a['firstName'],$b['lastName']);
+    }
+
     public function SortBy($pattern)
     {
 
         //GET JSON
         $json_data = $this->input->post('employees');
         //Decode the JSON data into an array
-        $employees = json_decode($json_data,true);
-        
-        // $employees = null;
 
-        if($pattern == 'all'){
-            $employees = $this->_entityModel->GetSingleEntity('employee');
-        }else{
+
+        $employees=[];
+        $sorted = [];
+
+        if($json_data !== null)
+        {
+            $employees = json_decode($json_data,true);
+
+            if($employees !== null)
+            {
+                if($pattern=="all") $pattern = "id";
+
+                usort($employees,function($a,$b) use ($pattern){
+                    return strcmp($a[$pattern],$b[$pattern]);
+                });
+            }
+        }
+
+        foreach($employees as $key=>$value)
+        {
+            echo $key.$value;
+        }
+
+        //echo var_dump($employees);die;
+
+        
+        //echo var_dump($employees);die;
+        // if($pattern != 'all'){
+        //     $employees = usort($employees,function($a,$b){
+        //         return strcmp($a['firstName'],$b['firstName']);
+        //     });
+        // }
+        // if($pattern == 'all'){
+        //     $employees = $this->_entityModel->GetSingleEntity('employee');
+        // }else{
         //     $employees = $this->_entityModel->GetEmployeeSortedBy($pattern,'employee');
         // }
-            // unsort($employees,function($a,$b){
-            //     return strcmp($a[$pattern],$b[$pattern]);
-            // });
+        //     unsort($employees,function($a,$b){
+        //         return strcmp($a[$pattern],$b[$pattern]);
+        //     });
 
-         }
-        $currentIndex = 0;
-        foreach($employees as $employee)
-        {
-            //** CHANGE THE DEPARTMENT & POSITION ID WITH NAME BEFORE SHOW IN TABLE */
-            $departmentId = $employee->department;
-            $departmentName = $this->_departmentModel->GetDepartment($departmentId,'name');
-            $employees[$currentIndex]->department = $departmentName;
+        //  }
+        
+        //echo var_dump($employees);die;
+        // $currentIndex = 0;
+        // foreach($employees as $employee)
+        // {
+        //     //** CHANGE THE DEPARTMENT & POSITION ID WITH NAME BEFORE SHOW IN TABLE */
+        //     $departmentId = $employee->department;
+        //     $departmentName = $this->_departmentModel->GetDepartment($departmentId,'name');
+        //     $employees[$currentIndex]->department = $departmentName;
 
-            $positionId = $employee->position;
-            $positionName = $this->_positionModel->GetPosition($positionId,'name');
-            $employees[$currentIndex]->position = $positionName;
+        //     $positionId = $employee->position;
+        //     $positionName = $this->_positionModel->GetPosition($positionId,'name');
+        //     $employees[$currentIndex]->position = $positionName;
 
-            $employee->aliasName = strtoupper(substr($employee->firstName,0,1).substr($employee->lastName,0,1));
+        //     $employee->aliasName = strtoupper(substr($employee->firstName,0,1).substr($employee->lastName,0,1));
 
-            $currentIndex ++;
-        }
+        //     $currentIndex ++;
+        // }
+
+        //echo var_dump($employees);die;
         //$completeData = $this->DeptAndPostToName($employees);
         $userData["employees"] = $employees;
         $manageOutput['tbody'] = $this->load->view('SupportComponent/User/userTable',$userData,true);

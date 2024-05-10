@@ -4,20 +4,16 @@ $(document).ready(function(){
         e.preventDefault();
         var data=getDataFromForm();
 
-        if(data['email'] == "")
-        {
+        if(data['email'] == ""){
             alert("Email is required.");
         }
-        if(data['password'] == "")
-        {
+        if(data['password'] == ""){
             alert("Password is required.");
         }
         else
         {
-            if(validateEmail(data['email']))
-            {     
+            if(validateEmail(data['email'])){     
                 proceedLogin(data);
-
             }else{
                 alert("Please input valid email");
             }

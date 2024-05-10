@@ -6,13 +6,12 @@
         </div>
         <div class="col-lg-6 col-md-6 login-panel shadow-lg"> 
         <?= validation_errors();?>
-               <?= form_open('LoginController/SessionManagement');?>
-                <form class="needs-validation"novalidate>
+               <?= form_open('login/processLogin');?>
+                <form>
                 <div class="mb-3 mt-3">
                     <i class='bx bx-user-circle icon'></i>
                     <label for="userEmail" class="form-label">Email address</label>
-                    <input type="email" class="form-control inputEmail" name="userEmail" id="userEmail" 
-                    aria-describedby="emailHelp" placeholder="user@sample.com" required>
+                    <input type="email" class="form-control inputEmail" name="userEmail" id="userEmail" aria-describedby="emailHelp" placeholder="name@sample.com" required>
                     <?= form_error('userEmail')?>
                     <div class="valid-feedback">
                         Looks good!

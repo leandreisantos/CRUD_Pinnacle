@@ -206,7 +206,11 @@ $(document).ready(function(){
     function sortUserEventHandler(e){
         e.preventDefault();
         var employeesData = $("#employees-data").data('employees');
-        var jsonData = JSON.stringify(employeesData);
+        var jsonData = {
+            'employees':JSON.stringify(employeesData)
+        };
+
+        //alert(jsonData['employees']);
 
         var value = $(this).val();
         SubmitAjax('POST','sort_user_by/'+value,jsonData,sortUser);
@@ -214,7 +218,8 @@ $(document).ready(function(){
 
     function sortUser(response)
     {
-        $(".wrapper-employees").html(response.tbody);
+        //$(".wrapper-employees").html(response.tbody);
+        console.log(response);
     }
 
 

@@ -144,6 +144,16 @@ body{
   font-size: 15px;
 }
 
+.login-panel .inputEmail{
+  /* border: 1px solid var(--bg-danger); */
+}
+
+
+
+
+
+
+
 .userModal .modal-body, .userModal .modal-content,.userModal .modal-header{
   border-radius: 20px;
   background-color: var(--bg-dark);

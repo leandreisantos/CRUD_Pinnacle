@@ -1,5 +1,5 @@
 
-
+<div id="employees-data" data-employees="<?= htmlspecialchars(json_encode($employees))?>"></div>
 <?php foreach($employees as $employee):?>
                                 <div class="col-lg-3 p-2 col-md-6" id="<?=$employee->id?>">
                                     <div class="container-fluid user-card .show">

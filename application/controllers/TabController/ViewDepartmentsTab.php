@@ -14,10 +14,24 @@ class ViewDepartmentsTab extends CI_Controller{
     public function ShowDepartmentsTab()
     {
         $departments = $this->_entityModel->GetSingleEntity('departments');
-        $departmentsData['departments'] = $departments;
-        $departmentsData['departmentsTable'] = $this->load->view('SupportComponent/Department/departmentTable',$departmentsData,true);
+        // $departmentsData['departments'] = $departments;
+        // $departmentsData['departmentsTable'] = $this->load->view('SupportComponent/Department/departmentTable',$departmentsData,true);
 
-        $data['viewDeptTab']= $this->load->view('TabComponent/view_departments',$departmentsData,true);
+        // $departmentsData['title'] = "Deparments";
+        // $departmentsData['description'] = "All the departments are listed here.";
+        // $departmentsData['buttonAdd'] = $this->load->view('SupportComponent/Department/departmentAddBtn','',true);
+
+
+        // $departments['content'] = $this->load->view('TabComponent/view_departments',$departmentsData,true);
+
+        $departmentsData=[
+            'departments' => $departments,
+            'title' => "Departments",
+            'description'=>"All the departments are listed here.",
+            'buttonAdd'=> $this->load->view('SupportComponent/Department/departmentAddBtn','',true)
+        ];
+        $departmentsData['departmentsTable'] = $this->load->view('SupportComponent/Department/departmentTable',$departmentsData,true);
+        $data['viewDeptTab']= $this->load->view('TabComponent/view_support',$departmentsData,true);
         $this->_jsonHelper->SetOutput($this->output,$data);
     }
 

@@ -1,5 +1,4 @@
 <div class="container-fluid employees-container">
-   <div id="employees-data" data-employees="<?= htmlspecialchars(json_encode($employees))?>"></div>
    <div class="row">
       <!-- <div class="col-lg-12">
          Administration <span>> Employees</span>
@@ -37,7 +36,8 @@
                <div class="col-lg-12 p-0">
                   <div class="container-fluid">
                      <div class="row wrapper-employees">
-                        <?php foreach($employees as $employee):?>
+                     <div id="employees-data" data-employees="<?= htmlspecialchars(json_encode($employees))?>"></div> 
+                        <?php foreach($employees as $employee):?>  
                         <div class="col-lg-3 p-2 col-md-6" id="<?=$employee->id?>">
                            <div class="container-fluid user-card .show ">
                               <div class="row">
