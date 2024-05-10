@@ -1,0 +1,1 @@
+<a href="<?=base_url('users')?>" class="nav-link">Show Table</a>

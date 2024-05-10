@@ -1,0 +1,13 @@
+1. Remeber last input if they register
+2. rember input in register if pass and confirm pass not match
+
+
+//Add user type
+1.Add extra column in table for user type in database✅
+2. When they register it default to user type in database✅
+3. Table add 1 column with 2 radio button for user type
+4. if admin choose the user become admin it check the radion button and it will update their user type
+
+
+    //validation
+        1. if user login and they choose admin for user type it will display that accout is not admin type
