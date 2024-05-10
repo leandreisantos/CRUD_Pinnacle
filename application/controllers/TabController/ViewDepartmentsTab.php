@@ -30,6 +30,7 @@ class ViewDepartmentsTab extends CI_Controller{
             'description'=>"All the departments are listed here.",
             'buttonAdd'=> $this->load->view('SupportComponent/Department/departmentAddBtn','',true)
         ];
+
         $departmentsData['departmentsTable'] = $this->load->view('SupportComponent/Department/departmentTable',$departmentsData,true);
         $data['viewDeptTab']= $this->load->view('TabComponent/view_support',$departmentsData,true);
         $this->_jsonHelper->SetOutput($this->output,$data);

@@ -1,3 +1,30 @@
+<div class="offcanvas offcanvas-end" data-bs-backdrop="static" tabindex="-1" id="offcanvasExample" aria-labelledby="offcanvasExampleLabel">
+      <div class="offcanvas-header">
+        <h5 class="offcanvas-title" id="offcanvasExampleLabel">Employee Information</h5>
+        <button type="button" class="btn-close" data-bs-dismiss="offcanvas" aria-label="Close"></button>
+      </div>
+      <div class="offcanvas-body">
+        <div class="container-fluid p-3">
+            <div class="row">
+              <div class="col">
+                  <h3 class="name">Leandrei Santos</h3>
+                  <hr>
+                  <i class='bx bx-envelope'></i>
+                  <p class="email">leandrei@gmail.com</p>
+                  <i class='bx bx-briefcase' ></i>
+                  <p class="position">Programmer</p>
+                  <i class='bx bxs-dog' ></i>
+                  <p class="pet">Dog</p>
+                  <i class='bx bx-buildings' ></i>
+                  <p class="department">Pinnacle</p>
+                  <i class='bx bx-id-card'></i>
+                  <p class="role">admin</p>
+              </div>
+            </div>
+        </div>
+      </div>
+      </div>
+
 <div class="container tableUnder-con">
   <div class="row">
     <div class="col-lg-4 handled-dept">
@@ -48,7 +75,12 @@
               <div class="col">
                 <div class="row">
                   <div class="col edit-under-emp">
-                    <i class="bi bi-info-square"></i>
+                    <i class="bi bi-info-square" data-bs-toggle="offcanvas" href="#offcanvasExample" role="button" aria-controls="offcanvasExample" data-value="<?=$user->firstName?>"
+                    data-last-name="<?=$user->lastName?>"
+                    data-email="<?=$user->email?>"
+                    data-position="<?=$user->position?>"
+                    data-department="<?=$user->department?>"
+                    data-role="<?=$user->role?>"></i>
                   </div>
                 </div>
               </div>

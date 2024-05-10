@@ -1,12 +1,23 @@
 $(document).ready(function(){
     $('.edit-under-emp').click(function(){
-        alert('click');
+        var firstName = $(this).find("i").data("value");
+        var lastName = $(this).find('i').data("last-name");
+        var email = $(this).find('i').data('email');
+        var position = $(this).find('i').data("position");
+        var department = $(this).find('i').data('department');
+        var role =  $(this).find('i').data('role');
+
+        $('.name').text(firstName+" "+lastName);
+        $('.email').text(email);
+        $('.position').text(position);
+        $('.department').text(department);
+        $('.role').text(role);
     });
 
     function inputDeptEventHandler(e)
     {
         e.preventDefault();
-        var inputValue = $(this).val();
+        var inputValue =this.value;
         
         $.ajax({
             type:'POST',

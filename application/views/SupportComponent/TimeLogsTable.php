@@ -5,7 +5,7 @@
       <p>Your time logs provide detailed records of your start time and end time. </p>
     </div>
     <div class="col-lg-6 table-wrapper">
-      <table class="table table-hover table-time-logs">
+      <table class="table table-hover table-responsive table-dark table-time-logs">
         <thead>
           <tr>
             <th scope="col">Log Id</th>
