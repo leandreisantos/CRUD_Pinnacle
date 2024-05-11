@@ -80,6 +80,35 @@ class DataManagementModel extends CI_Model
         return false;
     }
 
+    public function insert_data($data,$tableName)
+    {
+        return $this->db->insert($tableName,$data);
+    }
+
+    public function isDataExist($fieldName,$inputValue,$tableName)
+    {
+        $this->db->where($fieldName,$inputValue);
+        $query = $this->db->get($tableName);
+        return ($query->num_rows()>=1) ? true : false;
+    }
+
+    public function deleteData($columnData,$equivData,$tableName){
+        return $this->db
+                    ->delete($tableName,[$columnData=>$equivData]);
+    }
+
+    public function getDataSortedBy($pattern,$tableName)
+    {
+        $query = $this->db->select('*')
+        ->from($tableName)
+        ->order_by($pattern,'asc')
+        ->get();
+
+        return $query->result();
+        // $query = "SELECT * FROM $tableName ORDER BY $pattern ASC";
+        // return $this->db->query($query);
+    }
+
 
 
     //** UTILITIES */

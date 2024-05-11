@@ -99,6 +99,7 @@ function ModalPost(response)
 
 function SubmitPost(response)
 {
+    //alert(response);
     if(response.status)
     {
         alert(response.message);

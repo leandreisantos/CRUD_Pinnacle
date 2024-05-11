@@ -14,11 +14,14 @@ class ViewEmployeeTab extends CI_Controller{
         $this->_jsonHelper = new Json();
         $this->_departmentModel = new EntityManagementModel();
         $this->_positionModel = new PositionModel();
+
+        $this->load->model('DataManagementModel');
     }
 
     public function ShowEmployeeTab()
     {
-        $employees = $this->_entityModel->GetSingleEntity('employee');
+        //$employees = $this->_entityModel->GetSingleEntity('employee');
+        $employees = $this->DataManagementModel->getData('employee');
 
         $currentIndex = 0;
         foreach($employees as $employee)

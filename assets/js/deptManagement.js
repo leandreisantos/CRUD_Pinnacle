@@ -4,7 +4,7 @@ $(document).ready(function()
     function addDeptModalHandler(e)
     {
         e.preventDefault();
-        $("#title-edit-modal").text("Add Department");
+        $(".title-edit-modal").text("Add Department");
         SubmitAjax("POST","addDepartment",null,ModalAddDept);
     }
     $('.addDeptBtn').off('click').on('click',addDeptModalHandler);
@@ -35,7 +35,7 @@ $(document).ready(function()
         if(response.status)
         {
             alert(response.message);
-            $("tbody").html(response.tbody);
+            $(".wrapper-employees").html(response.tbody);
             $("#closeModalDept").click();
         }
         else
@@ -51,7 +51,7 @@ $(document).ready(function()
         var deptId = {
             'id': $(this).data('value1')
         };
-        $("#title-edit-modal").text("Edit Department");
+        $(".title-edit-modal").text("Edit Department");
         SubmitAjax("POST","editDepartment",deptId,ModalEditDept);
     }
     $('.edit-dept').off('click').on('click',editDeptModalHandler);
@@ -89,7 +89,7 @@ $(document).ready(function()
     function SubmitEditedDept(response)
     {
         alert(response.message);
-        $("tbody").html(response.tbody);
+        $(".wrapper-employees").html(response.tbody);
         $("#closeModalDept").click();
     }
     

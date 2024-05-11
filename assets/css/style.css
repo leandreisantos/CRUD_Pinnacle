@@ -556,6 +556,38 @@ header .image-text .header-text{
 }
 
 
+/*Notification tab*/
+.notification-container .title h2{
+  font-weight: 500;
+}
+
+.notification-container .today-container h4{
+  color: var(--primary-color);
+}
+
+.notification-container .notif-item{
+  border-radius: 10px;
+}
+
+.notification-container .notif-item .close i{
+  background-color: transparent;
+  border: 1px solid var(--primary-color);
+  padding: 10px;
+  border-radius: 10px;
+  color: var(--primary-color);
+}
+
+.notification-container .notif-item .close i:hover{
+  background-color: var(--primary-color);
+  color: var(--primary-color-light);
+  transition: var(--tran-05);
+}
+
+.notification-container .notif-item .time p{
+  color: var(--text-color);
+  float: right;
+}
+
 
 
 
@@ -1205,12 +1237,12 @@ h5{
   font-style: normal;
 }
 
-.modal-body{
+/* .modal-body{
   background-color: #222831;
 }
 .modal-header{
   background-color: var(--primary-color);
-}
+} */
 
 
 /*TimeLogs table*/
@@ -1648,6 +1680,57 @@ h5{
 .alert.slideInRight {
   animation: slideInRight 0.5s ease-out;
 }
+
+/*Department*/
+.dept-container .addDeptBtn{
+  background-color: var(--primary-color);
+  float: right;
+  padding: 10px;
+  color: var(--primary-color-light);
+  border: none;
+  border-radius: 10px;
+}
+
+.department-modal .modal-content{
+  background-color: var(--bg-dark);
+}
+
+.department-modal .modal-body .title-edit-modal{
+  color: var(--primary-color);
+  font-size: 30px;
+}
+
+.department-modal .modal-content .modal-body .icon{
+  float: right;
+  font-size: 30px;
+  color: var(--primary-color-light);
+  cursor: pointer;
+}
+
+.department-modal .modal-content .modal-body .icon:hover{
+  background-color: var(--primary-color);
+  border-radius: 60px;
+  transition: var(--tran-05);
+}
+
+.department-modal .modal-content .modal-body form label{
+  color: var(--primary-color-light);
+}
+
+.department-modal .modal-content .modal-body form button{
+  float: right;
+  margin-bottom: 10px;
+  border: 1px solid var(--primary-color);
+  color: var(--primary-color);
+}
+
+.department-modal .modal-content .modal-body form button:hover{
+  background-color: var(--primary-color);
+  color: var(--primary-color-light);
+  transition: var(--tran-05);
+}
+
+
 
 
 

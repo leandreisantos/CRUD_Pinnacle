@@ -1,2 +1,2 @@
-<button type="button" class="btn btn-info float-right ml-3 addDeptBtn" 
-data-toggle="modal" data-target="#departmentModal" value="">Add New Deparatment</button>
+<button type="button" class="btn btn-info addDeptBtn" 
+data-toggle="modal" data-target="#departmentModal" value=""><i class='bx bx-plus'></i>Add New Department</button>
