@@ -50,6 +50,11 @@ class CRUDOperations extends CI_Controller{
         return $manageOutput;
     }
 
+    protected function SearchData()
+    {
+        
+    }
+
 
 
 

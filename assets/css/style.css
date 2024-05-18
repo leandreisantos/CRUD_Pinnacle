@@ -129,6 +129,7 @@ body{
   float: right;
 }
 .login-btn:hover{
+  transition: var(--tran-05);
   background-color: var(--primary-color);
   color: white;
 
@@ -156,6 +157,49 @@ body{
 .login-panel .inputEmail{
   /* border: 1px solid var(--bg-danger); */
 }
+
+.login-panel .input-container .email-icon-error,
+.login-panel .input-container .pass-icon-error{
+  position: absolute;
+  right: 0;
+  top: 0;
+  margin-top: 10px;
+  margin-right: 10px;
+  z-index: 99999;
+  color: var(--bg-danger);
+  transition: opacity 0.9s ease;
+}
+
+.inputEmail.error,.inputPass.error{
+  border: 1px solid var(--bg-danger);
+}
+
+.input-container .error-message-email,
+.input-container .error-message-pass{
+  color: var(--bg-danger);
+}
+
+
+/* .login-panel .error-container{
+  opacity: 0;
+  max-height: 0;
+  overflow: hidden;
+  transition: opacity 0.9s ease, max-height 0.9s ease;
+  height: 100%;
+}
+
+.login-panel .error-container:not(.visually-hidden){
+  opacity: 1;
+  max-height: 1000px;
+}
+
+.login-panel .error-message{
+  color: var(--bg-danger);
+  float: right;
+  font-size: 15px;
+  text-align: right;
+} */
+
 
 
 

@@ -19,7 +19,7 @@
                <div class="col-lg-4 input-container">
                   <!-- <input type="text" placeholder="Search" class="search search_employees"> -->
                   <i class='bx bx-search-alt-2 icon'></i>
-                  <input type="text" placeholder="Search" class="search_employees">
+                  <input type="text" placeholder="Search" class="search_departments">
                </div>
                <div class="col-lg-2 mb-3">
                 <select class="form-select" id="sortDept" aria-label="Default select example">

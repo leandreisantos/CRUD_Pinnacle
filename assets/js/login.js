@@ -4,18 +4,16 @@ $(document).ready(function(){
         e.preventDefault();
         var data=getDataFromForm();
 
-        if(data['email'] == ""){
-            alert("Email is required.");
-        }
-        if(data['password'] == ""){
-            alert("Password is required.");
-        }
-        else
+        //Function to handle email and password validation
+        handleFieldValidation(data['email'],'.email-icon-error','.inputEmail');
+        handleFieldValidation(data['password'],'.pass-icon-error','.inputPass');
+
+        if(data['password']!=""&&data['email']!="")
         {
             if(validateEmail(data['email'])){     
                 proceedLogin(data);
             }else{
-                alert("Please input valid email");
+                $('.error-message-email').removeClass('visually-hidden');
             }
         }
     }$('#login-btn').off('click').on('click',loginEventHandler);
@@ -23,11 +21,23 @@ $(document).ready(function(){
 });
 
 
+//Function to handle validation for a single field
+function handleFieldValidation(value,iconSelector,inputSelector){
+    if(value == ""){
+        $(iconSelector).removeClass('visually-hidden');
+        $(inputSelector).addClass('error');
+    } else {
+        $(iconSelector).addClass('visually-hidden');
+        $(inputSelector).removeClass('error');
+    }
+}
+
+
 function getDataFromForm()
 {
     var data = {
-        'email': $("#userEmail").val().trim(),
-        'password':$("#userPassword").val().trim(),
+        'email': $("#userEmail").val().replace(/\s/g,''),
+        'password':$("#userPassword").val().replace(/\s/g,''),
     }
     return data;
 }
@@ -48,9 +58,18 @@ function proceedLogin(data)
             if(response.status)
             {
                 alert(response.message);
-                location.reload();
+                //location.reload();
+                $('#successToast').toast('show');
             }else{
-                alert(response.message);
+                if(response.message=="Email not found"){
+                    $('.error-message-email').text("Email not found");
+                    $('.error-message-email').removeClass("visually-hidden");
+                }
+                if(response.message == "Password is incorrect"){
+                    $('.error-message-pass').text("Password is incorrect");
+                    $('.error-message-pass').removeClass("visually-hidden");
+                }
+                
             }
         },
         error: function(xhr,status,error)

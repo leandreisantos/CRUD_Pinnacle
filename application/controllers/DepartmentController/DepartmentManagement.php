@@ -86,6 +86,14 @@ class DepartmentManagement extends CI_Controller
         $this->_jsonHelper->SetOutput($this->output,$manageOutput);
     }
 
+    public function SearchDepartment()
+    {
+        //Get the search query
+        $query = $this->input->post('query');
+        
+
+    }
+
 
     //** OTHER UTILITIES TO SUPPORT DEPARTMENT MANAGEMENT*/
 

@@ -1,30 +1,4 @@
 <div class="home-body">
-      <!-- <div class="offcanvas offcanvas-end" data-bs-backdrop="static" tabindex="-1" id="offcanvasExample" aria-labelledby="offcanvasExampleLabel">
-         <div class="offcanvas-header">
-            <h5 class="offcanvas-title" id="offcanvasExampleLabel">Employee Information</h5>
-            <button type="button" class="btn-close" data-bs-dismiss="offcanvas" aria-label="Close"></button>
-         </div>
-         <div class="offcanvas-body">
-            <div class="container-fluid p-3">
-               <div class="row">
-                  <div class="col">
-                     <h3>Leandrei Santos</h3>
-                     <hr>
-                     <i class='bx bx-envelope'></i>
-                     <p>leandrei@gmail.com</p>
-                     <i class='bx bx-briefcase' ></i>
-                     <p>Programmer</p>
-                     <i class='bx bxs-dog' ></i>
-                     <p>Dog</p>
-                     <i class='bx bx-buildings' ></i>
-                     <p>Pinnacle</p>
-                     <i class='bx bx-id-card'></i>
-                     <p>admin</p>
-                  </div>
-               </div>
-            </div>
-         </div>
-         </div> -->
    <nav class="sidebar">
       <header>
          <div class="image-text">
@@ -62,13 +36,8 @@
                      <i class='bx bx-bell icon'></i>
                      <span class="text nav-text">
                         Notification
-                        <!-- <span class="position-absolute top-0 start-100 translate-middle badge rounded-pill notification_number">3
-                           </span> -->
                      </span>
                   </a>
-                  <!-- <div class="container_notification_count">
-                     <span class="notification_number">0</span>
-                     </div> -->
                </li>
                <li class="navlink show-time-logs" title="Time logs">
                   <a href="#">

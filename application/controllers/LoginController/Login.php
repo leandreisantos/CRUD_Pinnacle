@@ -3,24 +3,40 @@ defined('BASEPATH') OR exit('No direct script access allowed');
 
 class Login extends CI_Controller
 {
+    /**
+    * Handle login decision
+    */
     public function handleLoginDecision()
     {
-        if($this->is_session_started('id'))
-        {
+        if($this->isLoggedIn()){
             redirect('home');
         }
 
-        $this->load->view('SupportComponent/header.php');
-        $this->load->view('MainComponent/Login.php');
-        $this->load->view('SupportComponent/footer.php');
+        $this->loadLoginPage();
     }
 
     
     //** UTILITIES */
 
-    private function is_session_started($dataInfo)
+    /**
+     * Load login page
+     */
+
+    private function loadLoginPage()
     {
-        $sessionId = $this->session->userdata('user_id');
-        return !empty($sessionId);
+        $this->load->view('SupportComponent/header.php');
+        $this->load->view('MainComponent/Login.php');
+        $this->load->view('SupportComponent/footer.php');
+    }
+
+    /**
+     * Check if user is logged in
+     * 
+     * @return bool
+     */
+    private function isLoggedIn()
+    {
+        $userId = $this->session->userdata('user_id');
+        return !empty($userId);
     }
 }

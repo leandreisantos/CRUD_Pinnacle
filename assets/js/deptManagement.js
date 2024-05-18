@@ -128,7 +128,23 @@ $(document).ready(function()
 
     function sortDept(response)
     {
-        $("tbody").html(response.tbody);
+        // $("tbody").html(response.tbody);
+        $(".wrapper-employees").html(response.tbody);
+    }
+
+
+    //**SEARCH DEPARTMENT */
+    function searchDeptEventHandler(e)
+    {
+        e.preventDefault();
+        var query = $(this).val();
+        //alert(query);
+        //SubmitAjax('POST','search/search_user',{query:query},searchUser)
+    } $('.search_departments').off('keyup').on('keyup',searchDeptEventHandler);
+
+    function searchDepartment(response)
+    {
+        $(".wrapper-employees").html(response.tbody);
     }
 
 });

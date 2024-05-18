@@ -18,7 +18,7 @@
         </div>
         <div class="col-lg-12 bg-dark employees-table-wrapper">
             <div class="table table-responsive-sm table-hover table-dark">
-                <table class="table">
+                <table class="table table-dark">
                     <thead>
                         <tr>
                             <th scope="col">Id</th>

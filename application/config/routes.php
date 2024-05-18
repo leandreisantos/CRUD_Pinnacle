@@ -42,6 +42,7 @@ $route['sort_position_by/(:any)'] = 'PositionController/PositionManagement/SortB
 
 //** SEARCH DATA*/
 $route['search/search_user'] ='UserController/DataManagement/SearchUser';
+$route['search/search_user'] = 'DepartmentController/DepartmentManagement/SearchDepertment';
 
 //** DEPARTMENT ROUTES*/
 $route['users/loadDeptTable'] = 'DepartmentController/Department/LoadDeptTable';
