@@ -10,9 +10,9 @@
                 <form>
                 <div class="mb-3 mt-3">
                     <i class='bx bx-user-circle icon'></i>
-                    <label for="userEmail" class="form-label">Email address</label>
                     <div class="input-container">
-                        <input type="email" class="form-control inputEmail" name="userEmail" id="userEmail" aria-describedby="emailHelp" placeholder="name@sample.com" required>
+                        <label for="userEmail" class="form-label email-label">Email address</label>
+                        <input type="email" class="form-control inputEmail" name="userEmail" id="userEmail" aria-describedby="emailHelp" required>
                         <i class='bx bx-error email-icon-error visually-hidden'></i>
                         <p class="error-message-email p-1 visually-hidden">Please enter valid email</p>
                     </div>
@@ -40,18 +40,6 @@
             </form>
             <?= form_close();?>
         </div>
-    </div>
-
-    <div class="toast" id="successToast" role="alert" aria-live="assertive" aria-atomic="true">
-      <div class="toast-header">
-          <strong class="mr-auto">Success</strong>
-          <button type="button" class="ml-2 mb-1 close" data-dismiss="toast" aria-label="Close">
-              <span aria-hidden="true">&times;</span>
-          </button>
-      </div>
-      <div class="toast-body">
-          Successfully logged in
-      </div>
     </div>
 </div>
 

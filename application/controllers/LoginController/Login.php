@@ -8,10 +8,7 @@ class Login extends CI_Controller
     */
     public function handleLoginDecision()
     {
-        if($this->isLoggedIn()){
-            redirect('home');
-        }
-
+        if($this->isLoggedIn()) redirect('home');
         $this->loadLoginPage();
     }
 
@@ -24,9 +21,15 @@ class Login extends CI_Controller
 
     private function loadLoginPage()
     {
-        $this->load->view('SupportComponent/header.php');
-        $this->load->view('MainComponent/Login.php');
-        $this->load->view('SupportComponent/footer.php');
+        $components = array(
+            'SupportComponent/header',
+            'MainComponent/Login',
+            'SupportComponent/footer'
+        );
+
+        foreach($components as $component){
+            $this->load->view($component);
+        }
     }
 
     /**

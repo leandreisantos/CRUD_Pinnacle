@@ -3,10 +3,7 @@ defined('BASEPATH') OR exit('No direct script access allowed');
 
 class MainController extends CI_Controller
 {
-    //private $_userModel2;
     private $_departmentModel;
-    //private $_positionModel;
-    //private $_logStatus;
     private $_timeLogModel;
     private $_activeUser;
     private $_jsonHelper;
@@ -17,10 +14,7 @@ class MainController extends CI_Controller
     {
         parent::__construct();
 
-        //$this->_userModel2 = new UserModel2();
         $this->_departmentModel = new EntityManagementModel();
-        //$this->_positionModel = new PositionModel();
-        //$this->_logStatus = new LogStatusModel();
         $this->_timeLogModel = new TimeLogModel();
         $this->_jsonHelper = new Json();
 
@@ -65,16 +59,13 @@ class MainController extends CI_Controller
     private function manageHomeContent()
     {
         $employeeTable = 'employee';
-        //$userData = $this->_userModel2->GetUser($this->_activeUser);
         $userData = $this->DataManagementModel->getSingleData('id',$this->_activeUser,$employeeTable);
         $data=[
             'user_id'=>$this->_activeUser,
-            //'user_role'=>$this->_userModel2->getSingleData('id',$this->_activeUser,'role'),
             'user_role'=>$this->DataManagementModel->fetchSpecific('id',$this->_activeUser,'role',$employeeTable),
             'timeLogs'=>$this->DataManagementModel->fetchFirstRecords($this->_activeUser,'employee_time_log',3,'employeeId'),
             'user_position'=>$this->session->userdata('user_position'),
             'user_department'=>$this->session->userdata('user_dept')
-            //'timeLogs'=>$this->_timeLogModel->GeGetFirst5TimeLogtFirst5TimeLog($this->_activeUser)
         ];
 
         $this->prepareManagementButtons($data);
