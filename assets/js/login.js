@@ -58,7 +58,7 @@ function proceedLogin(data)
             if(response.status)
             {
                 alert(response.message);
-                //location.reload();
+                location.reload();
                 $('#successToast').toast('show');
             }else{
                 if(response.message=="Email not found"){
