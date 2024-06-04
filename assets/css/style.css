@@ -306,6 +306,7 @@ form h2{
   width: 88px;
   height: 100%;
   opacity: 100;
+  padding: 10px 10px;
   /* z-index: 9999; */
   background-color: var(--sidebar-color);
 }
@@ -471,7 +472,7 @@ header .image-text .header-text{
 }
 
 .sidebar .menu-bar{
-  height: calc(100% - 100px);
+  height: calc(100% - 120px);
   display: flex;
   flex-direction: column;
   justify-content: space-between;
@@ -520,7 +521,7 @@ header .image-text .header-text{
 }
 
 .sidebar.close ~ .home{
-  left: 100px;
+  left: 130px; /*100px*/
   width: calc(100% - 200px);
 }
 
@@ -666,6 +667,7 @@ header .image-text .header-text{
 .welcome-container
 {
   min-height: 420px;
+  min-width: 400px;
   padding: 40px;
   border-radius: 20px;
   /* transition: var(--tran-05); */
@@ -689,6 +691,15 @@ header .image-text .header-text{
   border-radius: 20px;
   height: 200px;
   justify-content: center;
+}
+
+.date-container .show-more-date .icon{
+  font-size: 20px;
+}
+
+.date-container .show-more-date button{
+  background: transparent;
+  border: 0px;
 }
 
 
@@ -742,6 +753,7 @@ header .image-text .header-text{
 }
 .container-notification-dash{
   min-height: 320px;
+  min-width: 400px;
 }
 
 .container-notification-dash .icon{
@@ -1148,6 +1160,7 @@ transition: all .2s ease-in-out;
 }
 .container-time
 {
+  min-width: 400px;
   border-radius: 20px;
   padding: 20px;
   background-color: var(--primary-color);
@@ -1170,6 +1183,7 @@ transition: all .2s ease-in-out;
 }
 
 .announcment-container{
+  min-width: 400px;
   border-radius: 20px;
   width: 100%;
   margin-top: 2px;
@@ -1683,6 +1697,7 @@ h5{
 
 .timelog-table-wrapper{
   min-height: 330px;
+  min-width: 400px;
   border-radius: 20px;
   overflow: auto;
   transition: var(--tran-03);

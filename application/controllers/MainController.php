@@ -34,7 +34,6 @@ class MainController extends CI_Controller
         if($this->_activeUser == ""){
             redirect('login');
         } else {
-
             $data = $this->manageHomeContent();
             $function = $this->load->view('MainComponent/HomeComponent.php',$data);
             $this->SupportTemplate($function);

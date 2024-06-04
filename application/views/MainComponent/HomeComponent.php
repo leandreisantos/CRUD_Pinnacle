@@ -51,7 +51,7 @@
             </ul>
          </div>
          <div class="bottom-content">
-            <li class="" title="logout" data-bs-toggle="modal" data-bs-target="#logoutModal">
+            <li class="" title="logout" data-bs-toggle="modal" data-bs-target="#logoutModal" hidden>
                <a href="#">
                <i class='bx bx-log-out icon'></i>
                <span class="text nav-text">Logout</span>
@@ -59,6 +59,12 @@
             </li>
          </div>
       </div>
+         <li class="logout-list" title="logout" data-bs-toggle="modal" data-bs-target="#logoutModal">
+            <a href="#">
+            <i class='bx bx-log-out icon'></i>
+            <span class="text nav-text">Logout</span>
+            </a>
+         </li>
    </nav>
    <!-- Modal -->
    <div class="modal fade logoutModal" id="logoutModal" tabindex="-1" aria-labelledby="logoutModalLabel" aria-hidden="true">
@@ -189,14 +195,17 @@
                   <div class="col-12 container-time shadow-lg mt-1">
                      <div class="container-fluid">
                         <div class="row">
-                           <div class="col-5 d-flex align-items-center">
+                           <div class="col-4 d-flex align-items-center">
                               <div class="day-text-formate">TODAY</div>
                            </div>
-                           <div class="col-6 d-flex align-items-center">
+                           <div class="col-5 d-flex align-items-center">
                               <div class="date-time-value">
                                  <div class="time-formate">02:51:20</div>
                                  <div class="date-formate">23 - july - 2022</div>
                               </div>
+                           </div>
+                           <div class="col-3 d-flex justify-content-end align-items-center show-more-date">
+                              <button class="btn btn-primary" type="button" data-bs-toggle="offcanvas" data-bs-target="#offcanvasRight" aria-controls="offcanvasRight"><i class='bx bxs-chevron-right icon'></i></button>
                            </div>
                         </div>
                      </div>

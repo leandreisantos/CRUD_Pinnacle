@@ -10,8 +10,8 @@
                 <form>
                 <div class="mb-3 mt-3">
                     <i class='bx bx-user-circle icon'></i>
+                    <label for="userEmail" class="form-label">Email address</label>
                     <div class="input-container">
-                        <label for="userEmail" class="form-label email-label">Email address</label>
                         <input type="email" class="form-control inputEmail" name="userEmail" id="userEmail" aria-describedby="emailHelp" required>
                         <i class='bx bx-error email-icon-error visually-hidden'></i>
                         <p class="error-message-email p-1 visually-hidden">Please enter valid email</p>
