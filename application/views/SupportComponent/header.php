@@ -12,7 +12,10 @@
 
     <title>CRUD TASK</title>
   </head>
-  <body>    <div class="toast" id="successToast" role="alert" aria-live="assertive" aria-atomic="true">
+  <body>    
+    
+  
+  <div class="toast" id="successToast" role="alert" aria-live="assertive" aria-atomic="true">
       <div class="toast-header">
           <strong class="mr-auto">Success</strong>
           <button type="button" class="ml-2 mb-1 close" data-dismiss="toast" aria-label="Close">
@@ -24,7 +27,6 @@
       </div>
     </div>
 
-    
     <!--SHOW MORE DATE-->
     <div class="offcanvas offcanvas-end" tabindex="-1" id="offcanvasRight" aria-labelledby="offcanvasRightLabel">
       <div class="offcanvas-header">
