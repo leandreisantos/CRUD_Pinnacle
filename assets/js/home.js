@@ -1,10 +1,12 @@
 const body = document.querySelector(".home-body"),
       sidebar = body.querySelector(".sidebar"),
       toggle = body.querySelector(".toggle"),
-      searchBtn = body.querySelector(".search-box");
+      searchBtn = body.querySelector(".search-box"),
+      inputSearch = body.querySelector(".nav-search");
 
       toggle.addEventListener("click",()=>{
         sidebar.classList.toggle("close");
+        //inputSearch.value=null;
       });
 
 //Navigation toggle

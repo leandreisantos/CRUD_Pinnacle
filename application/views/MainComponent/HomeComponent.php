@@ -9,14 +9,14 @@
                <span class="name"><?=$user_role?></span>
                <span class="profession"><?=$user_position?></span>
             </div>
-            <i class="bx bx-chevron-right toggle"></i>
+            <i class="bx bx-chevron-right toggle" title="Close Sidebar"></i>
          </div>
       </header>
       <div class="menu-bar">
          <div class="menu">
             <li class="search-box">
                <i class='bx bx-search-alt-2 icon' ></i>
-               <input type="search" placeholder="Search...." id="nav-search">
+               <input type="search" placeholder="Search...." id="nav-search" class="nav-search">
             </li>
             <ul class="menu-links" id="menu-links">
                <li class="navlink dashboard" title="Dashboard" id="navlink">
@@ -51,15 +51,15 @@
             </ul>
          </div>
          <div class="bottom-content">
-            <li class="" title="logout" data-bs-toggle="modal" data-bs-target="#logoutModal" hidden>
+            <!-- <li class="" title="logout" data-bs-toggle="modal" data-bs-target="#logoutModal" hidden>
                <a href="#">
                <i class='bx bx-log-out icon'></i>
                <span class="text nav-text">Logout</span>
                </a>
-            </li>
+            </li> -->
          </div>
       </div>
-         <li class="logout-list" title="logout" data-bs-toggle="modal" data-bs-target="#logoutModal">
+         <li class="logout-list" title="Logout" data-bs-toggle="modal" data-bs-target="#logoutModal">
             <a href="#">
             <i class='bx bx-log-out icon'></i>
             <span class="text nav-text">Logout</span>
