@@ -10,6 +10,7 @@ $route['home'] = 'MainController/homePage';
 $route['home_dash'] = 'MainController/homeDashboard';
 $route['showTimeLogs'] = "TimeLogController/TimeLogManagement/ShowTimeLogs";
 $route['show_under_employee/(:any)'] = "DepartmentController/HandledDepartment/ShowUnderEmp/$1";
+$route['calendar'] = "CalendarController/Calendar/showCurrentMonth";
 
 //**Tabs */
 $route['profile'] = 'TabController/ProfileController/showProfileTab';

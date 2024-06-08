@@ -10,15 +10,38 @@ $(document).ready(function(){
 
         if(data['password']!=""&&data['email']!="")
         {
-            if(validateEmail(data['email'])){     
-                proceedLogin(data);
-            }else{
-                $('.error-message-email').removeClass('visually-hidden');
-            }
+            validateEmail(data['email']) ? proceedLogin(data) : $('.error-message-email').removeClass('visually-hidden');
         }
     }$('#login-btn').off('click').on('click',loginEventHandler);
 
+    $('.toggle-password').click(function(){
+
+        const passwordField = $('.inputPass');
+        const toggleIcon = $('.toggle-password');
+        const slashEye = 'bi bi-eye-slash';
+        const eye = 'bi bi-eye';
+
+        if($(this).hasClass(slashEye)){
+            togglePasswordVisibilty(toggleIcon,eye,slashEye,'Hide Password',passwordField,'text');
+        }
+        else if($(this).hasClass(eye)){
+            togglePasswordVisibilty(toggleIcon,slashEye,eye,'Show Password',passwordField,'password');
+        }
+    });
+
+    $('#liveToastBtn').click(function(){
+        $('.toast').toast('show');
+    });
+
 });
+
+function togglePasswordVisibilty(toggleIcon,Addicon,removeIcon,
+                                 title,passwordField,type){
+    toggleIcon.removeClass(removeIcon);
+    toggleIcon.addClass(Addicon);
+    toggleIcon.attr('title',title);
+    passwordField.attr('type',type);
+}
 
 
 //Function to handle validation for a single field
@@ -31,7 +54,6 @@ function handleFieldValidation(value,iconSelector,inputSelector){
         $(inputSelector).removeClass('error');
     }
 }
-
 
 function getDataFromForm()
 {
@@ -59,7 +81,6 @@ function proceedLogin(data)
             {
                 alert(response.message);
                 location.reload();
-                $('#successToast').toast('show');
             }else{
                 if(response.message=="Email not found"){
                     $('.error-message-email').text("Email not found");

@@ -1,8 +1,9 @@
 <div class="container-fluid container-login">
+
     <div class="row row-login">
         <div class="col-lg-6 col-md-6 intro-login">
-            <h1><span>Welcome</span> sign in to website.</h1>
-            <p>Welcome to my platform! We're thrilled to have you here. Please enter your credentials below to access your account.</p>
+            <h1><?=$greetingHead?></h1>
+            <p><?=$greetingSub?></p>
         </div>
         <div class="col-lg-6 col-md-6 login-panel shadow-lg"> 
         <?=validation_errors();?>
@@ -22,6 +23,7 @@
                     <label for="userPassword" class="form-label">Password</label>
                     <div class="input-container">
                         <input type="password" class="form-control inputPass" id="userPassword" required>
+                        <i class="bi bi-eye-slash toggle-password" title="Show Password"></i>
                         <i class='bx bx-error pass-icon-error visually-hidden'></i>
                         <p class="error-message-pass p-1 visually-hidden">Password not match</p>
                     </div>

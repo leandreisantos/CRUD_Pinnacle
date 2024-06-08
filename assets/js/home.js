@@ -1,10 +1,12 @@
 const body = document.querySelector(".home-body"),
       sidebar = body.querySelector(".sidebar"),
       toggle = body.querySelector(".toggle"),
-      searchBtn = body.querySelector(".search-box");
+      searchBtn = body.querySelector(".search-box"),
+      inputSearch = body.querySelector(".nav-search");
 
       toggle.addEventListener("click",()=>{
         sidebar.classList.toggle("close");
+        //inputSearch.value=null;
       });
 
 //Navigation toggle
@@ -313,21 +315,21 @@ $(document).ready(function(){
     location.reload();
   }
 
-  //Edit enable
-  // function EditEnableEventHandle(e){
-  //   e.preventDefault();
-  //   alert("click edit");
-  //   //SubmitAjax('POST','enableEdit',null,EditEnable);
-  // }$('.icon-edit').off('click').on('click',EditEnableEventHandle);
+  $('.show-calendar').click(function(){
+      $.ajax({
+        type:'POST',
+        url:"calendar",
+        success:function(response)
+        {
+            $('.offcanvas-body').html(response.calendarContent);
+        },
+        error:function(xhr,status,erro)
+        {
+            alert(xhr.responseTxt);
+        }
+    });
+  });
 
-  // function EditEnable(response)
-  // {
-
-  // }
-
-  // $('.enable-edit').click(function(){
-  //   alert('click');
-  // });
 
 });
 

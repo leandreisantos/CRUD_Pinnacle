@@ -10,8 +10,7 @@ class CRUDOperations extends CI_Controller{
         $this->load->model('DataManagementModel');
     }
 
-    protected function CreateData($data,$data1,$inputValue,
-                               $componentName,$tableName,$dataName)
+    protected function CreateData($data,$data1,$inputValue,$componentName,$tableName,$dataName)
     {
         return $this->DataProcess($data,$data1,$inputValue,$componentName,$tableName,$dataName,'create');  
     }

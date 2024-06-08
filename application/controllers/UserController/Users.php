@@ -44,6 +44,7 @@ class Users extends CI_Controller
 
     public function LoadAddUserModal()
     {
+        $this->load->view("ModalComponent/UserManagementModal");
         $data['registerDesign'] = $this->load->view("SupportComponent/User/ConBtnRegister.php",'',true);
 
         $this->_jsonHelper->SetOutput($this->output,$data);
