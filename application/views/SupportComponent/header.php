@@ -11,28 +11,15 @@
     <title>CRUD TASK</title>
   </head>
   <body>    
-    
-<!--   
-    <div class="toast" id="successToast" role="alert" aria-live="assertive" aria-atomic="true">
-      <div class="toast-header">
-          <strong class="mr-auto">Success</strong>
-          <button type="button" class="ml-2 mb-1 close" data-dismiss="toast" aria-label="Close">
-              <span aria-hidden="true">&times;</span>
-          </button>
-      </div>
-      <div class="toast-body">
-          Successfully logged in
-      </div>
-    </div> -->
 
     <!--SHOW MORE DATE-->
-    <div class="offcanvas offcanvas-end" tabindex="-1" id="offcanvasRight" aria-labelledby="offcanvasRightLabel">
+    <div class="calendar-canvas offcanvas offcanvas-end" tabindex="-1" id="offcanvasRight" aria-labelledby="offcanvasRightLabel">
       <div class="offcanvas-header">
-        <h5 class="offcanvas-title" id="offcanvasRightLabel">Calendar</h5>
+        <h5 class="offcanvas-title offcanvas-calendar-title" id="offcanvasRightLabel">Calendar</h5>
         <button type="button" class="btn-close" data-bs-dismiss="offcanvas" aria-label="Close"></button>
       </div>
       <div class="offcanvas-body">
-          
+
       </div>
     </div>
 

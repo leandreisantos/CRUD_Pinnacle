@@ -205,7 +205,7 @@
                               </div>
                            </div>
                            <div class="col-3 d-flex justify-content-end align-items-center show-more-date">
-                              <button class="btn btn-primary" title="Show Calendar" type="button" data-bs-toggle="offcanvas" data-bs-target="#offcanvasRight" aria-controls="offcanvasRight"><i class='bx bxs-chevron-right icon'></i></button>
+                              <button class="btn btn-primary show-calendar" title="Show Calendar" type="button" data-bs-toggle="offcanvas" data-bs-target="#offcanvasRight" aria-controls="offcanvasRight"><i class='bx bxs-chevron-right icon'></i></button>
                            </div>
                         </div>
                      </div>

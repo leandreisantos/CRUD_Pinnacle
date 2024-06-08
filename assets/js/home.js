@@ -315,21 +315,21 @@ $(document).ready(function(){
     location.reload();
   }
 
-  //Edit enable
-  // function EditEnableEventHandle(e){
-  //   e.preventDefault();
-  //   alert("click edit");
-  //   //SubmitAjax('POST','enableEdit',null,EditEnable);
-  // }$('.icon-edit').off('click').on('click',EditEnableEventHandle);
+  $('.show-calendar').click(function(){
+      $.ajax({
+        type:'POST',
+        url:"calendar",
+        success:function(response)
+        {
+            $('.offcanvas-body').html(response.calendarContent);
+        },
+        error:function(xhr,status,erro)
+        {
+            alert(xhr.responseTxt);
+        }
+    });
+  });
 
-  // function EditEnable(response)
-  // {
-
-  // }
-
-  // $('.enable-edit').click(function(){
-  //   alert('click');
-  // });
 
 });
 
