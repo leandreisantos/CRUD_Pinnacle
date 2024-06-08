@@ -21,15 +21,14 @@ class Login extends CI_Controller
 
     private function loadLoginPage()
     {
-        $components = array(
-            'SupportComponent/header',
-            'MainComponent/Login',
-            'SupportComponent/footer'
-        );
+        $data=[
+            'greetingHead' => "<span>Welcome</span> sign in to website.",
+            'greetingSub' => "Welcome to my platform! We're thrilled to have you here. Please enter your credentials below to access your account."
+        ];
 
-        foreach($components as $component){
-            $this->load->view($component);
-        }
+        $this->load->view('SupportComponent/header');
+        $this->load->view('MainComponent/Login',$data);
+        $this->load->view('SupportComponent/footer');
     }
 
     /**

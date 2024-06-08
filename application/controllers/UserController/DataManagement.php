@@ -143,18 +143,9 @@ class DataManagement extends CI_Controller
 
             $currentIndex ++;
         }
-        //$completeData = $this->DeptAndPostToName($employees);
         $userData["employees"] = $employees;
         $manageOutput['tbody'] = $this->load->view('SupportComponent/User/userTable',$userData,true);
         $this->_jsonHelper->SetOutput($this->output,$manageOutput);
-
-        // $employees = $this->_entityModel->GetSingleEntity('employee');
-        // $completeData = $this->DeptAndPostToName($employees);
-        // $userData["employees"] = $completeData;
-        // $manageOutput = $this->_userOutputHelper->getEditResult(false);
-        // $manageOutput['tbody'] = $this->load->view('SupportComponent/User/userTable',$userData,true);
-
-        // $this->_jsonHelper->SetOutput($this->output,$manageOutput);
     }
 
 

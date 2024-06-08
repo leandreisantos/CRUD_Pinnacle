@@ -12,7 +12,7 @@
   </head>
   <body>    
     
-  
+<!--   
     <div class="toast" id="successToast" role="alert" aria-live="assertive" aria-atomic="true">
       <div class="toast-header">
           <strong class="mr-auto">Success</strong>
@@ -23,7 +23,7 @@
       <div class="toast-body">
           Successfully logged in
       </div>
-    </div>
+    </div> -->
 
     <!--SHOW MORE DATE-->
     <div class="offcanvas offcanvas-end" tabindex="-1" id="offcanvasRight" aria-labelledby="offcanvasRightLabel">
