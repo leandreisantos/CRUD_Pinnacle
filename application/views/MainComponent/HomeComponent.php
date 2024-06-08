@@ -96,12 +96,37 @@
       </div>
    </div>
    <section class="home">
+      <div class="container-fluid mt-4 mb-3">
+         <div class="row">
+            <div class="col-12 mb-4 dash_title_container">
+               <h2 class="dash_title">Main Dashboard</h2>
+            </div>
+            <div class="col-4 container-time shadow-lg mt-1">
+               <div class="container-fluid">
+                  <div class="row">
+                     <div class="col-4 d-flex align-items-center">
+                        <div class="day-text-formate">TODAY</div>
+                     </div>
+                     <div class="col-5 d-flex align-items-center">
+                        <div class="date-time-value">
+                           <div class="time-formate">02:51:20</div>
+                           <div class="date-formate">23 - july - 2022</div>
+                        </div>
+                     </div>
+                     <div class="col-3 d-flex justify-content-end align-items-center show-more-date">
+                        <button class="btn btn-primary" title="Show Calendar" type="button" data-bs-toggle="offcanvas" data-bs-target="#offcanvasRight" aria-controls="offcanvasRight"><i class='bx bxs-chevron-right icon'></i></button>
+                     </div>
+                  </div>
+               </div>
+            </div>
+         </div>
+      </div>
       <div class="container-fluid home-wrapper">
          <div class="row">
             <div class="col-lg-6">
                <div class="container-fluid">
                   <div class="row">
-                     <div class="col-lg-12 welcome-container shadow-lg">
+                     <div class="col-lg-8 welcome-container shadow-lg">
                         <div class="container wrapper">
                            <div class="row">
                               <div class="col-lg-6">
@@ -138,7 +163,7 @@
                            </div>
                         </div>
                      </div>
-                     <div class="col-12 bg-dark mt-2 timelog-table-wrapper wrapper-time-log shadow-lg">
+                     <div class="col-8 bg-dark mt-4 timelog-table-wrapper wrapper-time-log shadow-lg">
                         <div class="container-fluid p-3">
                            <div class="row">
                               <div class="col-12">
@@ -192,7 +217,7 @@
             </div>
             <div class="col-lg-5 ml-1 date-container">
                <div class="row">
-                  <div class="col-12 container-time shadow-lg mt-1">
+                  <!-- <div class="col-12 container-time shadow-lg mt-1">
                      <div class="container-fluid">
                         <div class="row">
                            <div class="col-4 d-flex align-items-center">
@@ -209,7 +234,7 @@
                            </div>
                         </div>
                      </div>
-                  </div>
+                  </div> -->
                   <div class="col-12 mt-2 announcment-container">
                      <div class="container-fluid p-3 content-wrapper">
                         <div class="row">

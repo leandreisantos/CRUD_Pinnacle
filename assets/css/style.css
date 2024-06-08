@@ -660,14 +660,21 @@ header .image-text .header-text{
 
 
 /*Home container*/
+.dash_title_container{
+  text-align: left;
+}
+.dash_title{
+  text-align: left;
+}
 .home-wrapper{
   animation: fadeIn 0.8s ease-in-out forwards;
+  padding: 0;
 }
 
 .welcome-container
 {
   min-height: 420px;
-  min-width: 400px;
+  min-width: 300px;
   padding: 40px;
   border-radius: 20px;
   /* transition: var(--tran-05); */
